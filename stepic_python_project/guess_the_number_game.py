@@ -1,56 +1,54 @@
-from random import *
+from random import randint
 
 def is_valid_answer(num):
-    if num.isdigit() and 1 <= int(num) <= 100:
+    if num.isdigit() and float(num) - int(float(num)) == 0 and 1 <= int(num) <= 100:
         return True
     else:
         return False
 
-print("Hello! This is GuessTheNumber game."
-      "\nThe rules are simple:"
-      "\n\tWe generate a random number and you should guess it. "
-      "\n\tYou'll be given a hints if your number is bigger or smaller than the right answer"
-      "\nDo you wanna play by yourself(1) or just watch how algorithm do it for you(2)?"
-      "\nEnter the command: ")
+def start_game():
+    print("This is GuessTheNumber game."
+          "\nThe rules are simple:"
+          "\nWe generate a random number in a range which you can choose and then you guess it. "
+          "\nYou'll be given a hints if your number is bigger or smaller than the right answer"
+          "\nEnter the range:")
 
-command = int(input())
+    while True: #todo - after n in continue the game continues to work
+        x, y = input(), input()
+        if x.isdigit() and y.isdigit():
+            if int(x) > int(y):
+                x, y = y, x
+        print(f"Guess the number between {x} and {y}: ")
+        compare_numbers(x, y)
 
-if command == 1:
-    answer = randint(1, 100)
-    print("Guess the number between 1 and 100: ")
+def compare_numbers(x, y):
+    count = 1
+    answer = randint(int(x), int(y))
     while True:
         user_answer = input()
         if is_valid_answer(user_answer) == True:
             if int(user_answer) > answer:
                 print("Smaller")
-                continue
+                count += 1
             elif int(user_answer) < answer:
                 print("Bigger")
-                continue
+                count += 1
             elif int(user_answer) == answer:
-                print("You won!")
+                print(f"You won! Count of tries: {count}")
+                continue_game()
                 break
         else:
             print("Incorrect number try again: ")
             continue
+def continue_game():
+    print("Do you wanna continue to play? y/n")
+    user_answer = input()
+    if user_answer in ("y", "n"):
+        if user_answer == "y":
+            start_game()
+        elif user_answer == "n":
+            print("See you later")
+    else:
+        print("Invalid command. Try again. y or n?")
 
-if command == 2:
-    answer = randint(1, 100)
-    left, right = 1, 100
-    guessing = (left + right) // 2
-    count = 0
-    while guessing != answer:
-        if guessing < answer:
-            print(f"Guessing is: {guessing}")
-            print("Smaller")
-            left = guessing + 1
-            guessing = (left + right) // 2
-            count += 1
-        elif guessing > answer:
-            print(f"Guessing is: {guessing}")
-            print("Bigger")
-            right = guessing - 1
-            guessing = (left + right) // 2
-            count += 1
-    print(f"The answer is: {guessing}"
-          f"\nCount of tries: {count}")
+start_game()
