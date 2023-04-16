@@ -13,7 +13,7 @@ ask_question_list = ["What is your question?", "What question is bothering you, 
 def greetings():
     print("Hello, my curious friend, I am a magic ball and I know the answer to any of your questions.")
     user_name = input("But first, let me know your name\n")
-    print(f"Hm.. {user_name}.. What a beautiful name)")
+    print(f"{user_name}.. What a beautiful name)")
     game()
 
 
@@ -27,10 +27,9 @@ def game():
 def continue_game():
     answer = input("Do you want to know something else, my friend?\n")
     while True:
-        if answer.lower not in ("no", "n", "not really",
-                      "yes", "y", "yes please"):
+        if answer.lower() not in ("no", "n", "not really", "yes", "y", "yes please"):
             answer = input("I don't understand you...Try to repeat, please\n")
-        if answer.lower() in ("no", "n", "not really"):
+        elif answer.lower() in ("no", "n", "not really"):
             print("Well then, see you later!")
             return False
         else:
