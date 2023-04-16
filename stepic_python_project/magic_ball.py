@@ -22,12 +22,12 @@ def game():
 def continue_game():
     answer = input("Do you want to know something else, my friend?\n")
     while True:
+        if answer not in ("no", "NO", "n", "N", "not really", "NOT REALLY",
+                      "yes", "YES", "y", "Y", "yes please", "YES PLEASE"):
+            answer = input("I don't understand you...Try to repeat, please\n")
         if answer in ("no", "NO", "n", "N", "not really", "NOT REALLY"):
             print("Well then, see you later!")
             return False
-        elif answer in ("yes", "YES", "y", "Y", "yes please", "YES PLEASE"):
-            game()
-            return True
         else:
-            answer = input("I don't understand you...Try to repeat, please\n")
+            return True
 greetings()
