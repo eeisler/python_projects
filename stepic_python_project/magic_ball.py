@@ -1,5 +1,6 @@
 from random import randint, choice
 
+
 answer_list = ["Definitely", "Determined", "No doubt", "Definitely yes", "You can be sure of it",
                "I think yes", "Most likely", "Good prospects", "Signs say yes" , "Yes",
                "Unclear yet, try again", "Ask later", "Better not tell", "Can't predict now", "Concentrate and ask again",

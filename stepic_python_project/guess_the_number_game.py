@@ -1,5 +1,6 @@
 from random import randint
 
+
 def is_valid_answer(num, x, y):
     return bool(num.isdigit() and float(num) - int(float(num)) == 0 and x <= int(num) <= y)
 
