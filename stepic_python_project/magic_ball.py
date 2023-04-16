@@ -5,6 +5,7 @@ answer_list = ["Definitely", "Determined", "No doubt", "Definitely yes", "You ca
                "I think yes", "Most likely", "Good prospects", "Signs say yes" , "Yes",
                "Unclear yet, try again", "Ask later", "Better not tell", "Can't predict now", "Concentrate and ask again",
                "Don't even think", "My answer is no", "According to my information, no", "Prospects are not very good", "Very doubtful"]
+
 ask_question_list = ["What is your question?", "What question is bothering you, my friend?", "What do you want to know?",
                      "You came to me with a question, for your future is vague. Ask a question and you will get an answer."]
 
