@@ -5,11 +5,10 @@ def is_valid_answer(num, x, y):
         return True
     else:
         return False
-
 def start_game():
     print("Hello! This is GuessTheNumber game.")
     while True:
-        print("Enter the range to guess the number: ")# if 1 - yes 2 - no (continue) works again
+        print("Enter the range to guess the number: ")
         x, y = input(), input()
         if x.isdigit() and y.isdigit():
             if int(x) > int(y):
@@ -20,10 +19,9 @@ def start_game():
             continue
         else:
             break
-
 def compare_numbers(x, y):
-    count = 1
     answer = randint(int(x), int(y))
+    count = 1
     while True:
         user_answer = input()
         if is_valid_answer(user_answer, int(x), int(y)) == True:
@@ -40,15 +38,13 @@ def compare_numbers(x, y):
             print("Incorrect number try again: ")
             continue
 def continue_game():
-    user_answer = input("Do you wanna continue to play? y/n \n")
-    if user_answer in ("y", "n"):
-        if user_answer == "y":
-            start_game()
-            return True
-        elif user_answer == "n":
+    user_answer = input("Do you wanna continue to play? y/n\n")
+    while True:
+        if user_answer not in ("y", "n", "Y", "N"):
+            user_answer = input("Invalid command. Try again. y or n?")
+        elif user_answer in ("n", "N"):
             print("See you later")
             return False
-    else:
-        print("Invalid command. Try again. y or n?")
-
+        else:
+            return True
 start_game()
