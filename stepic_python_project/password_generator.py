@@ -1,13 +1,12 @@
 from random import choice
 
-
 DIGITS = '0123456789'
 LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 PUNCTUATION = '!#$%&*+-=?@^_'
 chars = ''
 
-#try
+
 count_of_passwords = int(input("Enter the number of passwords to generate: "))
 password_length = int(input("Enter the length of a single password: "))
 numbers = input("Should the numbers be included? (+/-): ")
