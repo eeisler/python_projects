@@ -10,7 +10,7 @@ ask_question_list = ["What is your question?", "What question is bothering you, 
 
 
 def greetings():
-    print("Hello, my curious friend, I am a magic ball and I know the answer to any of your questions.")
+    print("Good day, my curious friend, I am a magic ball and I know the answer to any of your questions.")
     user_name = input("But first, let me know your name\n")
     print(f"{user_name}.. What a beautiful name)")
     game()

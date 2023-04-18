@@ -6,7 +6,6 @@ UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 PUNCTUATION = '!#$%&*+-=?@^_'
 chars = ''
 
-
 count_of_passwords = int(input("Enter the number of passwords to generate: "))
 password_length = int(input("Enter the length of a single password: "))
 numbers = input("Should the numbers be included? (+/-): ")
