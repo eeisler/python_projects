@@ -42,7 +42,7 @@ def encrypt(text, step):
                 result += upp_alphabet[(place + int(step)) % capacity]
         else:
             result += text[i]
-    return print(f"The result: {result}")
+    return print(f"The result:\n{result}")
 
 
 def decrypt(text, step):
@@ -57,7 +57,7 @@ def decrypt(text, step):
                 result += upp_alphabet[(place - int(step)) % capacity]
         else:
             result += text[i]
-    return print(f"The result: {result}")
+    return print(f"The result:\n{result}")
 
 
 if action == 'e':
