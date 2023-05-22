@@ -61,6 +61,7 @@ def decrypt(text, step):
 
 
 if action == 'e':
-    encrypt(in_text, steps)
+    print(f"The result:\n{encrypt(in_text, steps)}")
 elif action == 'd':
-    decrypt(in_text, steps)
+    print(f"The result:\n{decrypt(in_text, steps)}")
+
