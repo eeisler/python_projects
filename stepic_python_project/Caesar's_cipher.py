@@ -1,7 +1,7 @@
 eng_lower_alphabet = 'abcdefghijklmnopqrstuvwxyz'
 eng_upper_alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-rus_lower_alphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
-rus_upper_alphabet = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+rus_lower_alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+rus_upper_alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 
 action = input("Enter the action: encrypt(e) or decrypt(d):\n")
 while action != 'e' and action != 'd':
